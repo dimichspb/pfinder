@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Flight",
+    "number": "SK22",
+    "origin": "Stockholm",
+    "destination": "New York JFK",
+    "gate": "22",
+    "seat": "7B"
+  },
+  {
+    "name": "Flight",
+    "number": "SK455",
+    "origin": "Gerona Airport",
+    "destination": "Stockholm",
+    "gate": "45B",
+    "seat": "3A",
+    "counter": "344"
+  },
+  {
+    "name": "Train",
+    "number": "78A",
+    "origin": "Madrid",
+    "destination": "Barcelona",
+    "seat": "45B"
+  },
+  {
+    "name": "AirportBus",
+    "origin": "Barcelona",
+    "destination": "Gerona Airport"
+  }
+]

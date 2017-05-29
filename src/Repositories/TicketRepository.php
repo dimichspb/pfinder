@@ -7,6 +7,8 @@ class TicketRepository
 {
     const BUS_TICKET_NAME = 'Bus';
     const BUS_TICKET_CLASS = '\Pfinder\Tickets\BusTicket';
+    const AIRPORTBUS_TICKET_NAME = 'AirportBus';
+    const AIRPORTBUS_TICKET_CLASS = '\Pfinder\Tickets\AirportBusTicket';
     const TRAIN_TICKET_NAME = 'Train';
     const TRAIN_TICKET_CLASS = '\Pfinder\Tickets\TrainTicket';
     const FLIGHT_TICKET_NAME = 'Flight';
@@ -16,6 +18,7 @@ class TicketRepository
     {
         return [
             self::BUS_TICKET_NAME => self::BUS_TICKET_CLASS,
+            self::AIRPORTBUS_TICKET_NAME => self::AIRPORTBUS_TICKET_CLASS,
             self::TRAIN_TICKET_NAME => self::TRAIN_TICKET_CLASS,
             self::FLIGHT_TICKET_NAME => self::FLIGHT_TICKET_CLASS,
         ];

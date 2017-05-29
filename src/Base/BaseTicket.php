@@ -21,7 +21,7 @@ abstract class BaseTicket
                 throw new TicketDetailsParsingException('No nested attributes supported');
             }
             if (!property_exists($this, $name)) {
-                throw new TicketDetailsParsingException('Attribute ' . $name . ' does not exists in ' . get_class($this));
+                throw new TicketDetailsParsingException('Attribute "' . $name . '" does not exists in ' . get_class($this));
             }
             $this->$name = $value;
         }

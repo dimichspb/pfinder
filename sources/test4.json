@@ -1,12 +1,5 @@
 [
   {
-    "name": "Train",
-    "number": "78A",
-    "origin": "Madrid",
-    "destination": "Barcelona",
-    "seat": "45B"
-  },
-  {
     "name": "AirportBus",
     "origin": "Barcelona",
     "destination": "Gerona Airport"
@@ -27,5 +20,12 @@
     "destination": "New York JFK",
     "gate": "22",
     "seat": "7B"
+  },
+  {
+    "name": "Train",
+    "number": "78A",
+    "origin": "Madrid",
+    "destination": "Barcelona",
+    "seat": "45B"
   }
 ]

@@ -1,15 +1,15 @@
 [
   {
+    "name": "AirportBus",
+    "origin": "Barcelona",
+    "destination": "Gerona Airport"
+  },
+  {
     "name": "Train",
     "number": "78A",
     "origin": "Madrid",
     "destination": "Barcelona",
     "seat": "45B"
-  },
-  {
-    "name": "AirportBus",
-    "origin": "Barcelona",
-    "destination": "Gerona Airport"
   },
   {
     "name": "Flight",

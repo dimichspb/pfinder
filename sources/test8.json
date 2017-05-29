@@ -7,9 +7,12 @@
     "seat": "45B"
   },
   {
-    "name": "AirportBus",
-    "origin": "Barcelona",
-    "destination": "Gerona Airport"
+    "name": "Flight",
+    "number": "SK22",
+    "origin": "Stockholm",
+    "destination": "New York JFK",
+    "gate": "22",
+    "seat": "7B"
   },
   {
     "name": "Flight",
@@ -21,11 +24,8 @@
     "counter": "344"
   },
   {
-    "name": "Flight",
-    "number": "SK22",
-    "origin": "Stockholm",
-    "destination": "New York JFK",
-    "gate": "22",
-    "seat": "7B"
+    "name": "AirportBus",
+    "origin": "Barcelona",
+    "destination": "Gerona Airport"
   }
 ]

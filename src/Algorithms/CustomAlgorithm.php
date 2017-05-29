@@ -4,15 +4,26 @@ namespace Pfinder\Algorithms;
 use Pfinder\Collections\TicketCollection;
 use Pfinder\Interfaces\AlgorithmInterface;
 
+/**
+ * Class CustomAlgorithm
+ *
+ * Sorts tickets in TicketCollection using custom algorithm
+ *
+ * @package Pfinder\Algorithms
+ */
 class CustomAlgorithm implements AlgorithmInterface
 {
+    /**
+     * @inheritdoc
+     *
+     * @param TicketCollection $collection
+     * @return TicketCollection
+     */
     public function run(TicketCollection $collection): TicketCollection
     {
         $newCollection = new TicketCollection();
 
         foreach ($collection as $ticket) {
-
-            var_dump($ticket->name);
 
             $newCollection = $newCollection->insertAfterBefore($ticket, function ($item) use ($ticket) {
                 return $item->destination === $ticket->origin;
@@ -20,7 +31,6 @@ class CustomAlgorithm implements AlgorithmInterface
                 return $item->origin === $ticket->destination;
             });
 
-            var_dump($newCollection);
         }
 
         return $newCollection;

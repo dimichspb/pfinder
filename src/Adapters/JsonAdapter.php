@@ -6,8 +6,21 @@ use Pfinder\Collections\TicketCollection;
 use Pfinder\Exceptions\FileNotFoundException;
 use Pfinder\Factories\TicketFactory;
 
+/**
+ * Class JsonAdapter
+ *
+ * Builds TicketCollection from provided JSON file
+ *
+ * @package Pfinder\Adapters
+ */
 class JsonAdapter extends BaseAdapter
 {
+    /**
+     * @inheritdoc
+     *
+     * @return TicketCollection
+     * @throws FileNotFoundException
+     */
     public function getCollection(): TicketCollection
     {
         if (!file_exists($this->source)) {

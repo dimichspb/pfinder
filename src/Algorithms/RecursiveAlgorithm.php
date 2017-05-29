@@ -5,8 +5,21 @@ use Pfinder\Base\BaseTicket;
 use Pfinder\Collections\TicketCollection;
 use Pfinder\Interfaces\AlgorithmInterface;
 
+/**
+ * Class RecursiveAlgorithm
+ *
+ * Sorts tickets inside TicketCollection using usort function of PHP
+ *
+ * @package Pfinder\Algorithms
+ */
 class RecursiveAlgorithm implements AlgorithmInterface
 {
+    /**
+     * @inheritdoc
+     *
+     * @param TicketCollection $collection
+     * @return TicketCollection
+     */
     public function run(TicketCollection $collection): TicketCollection
     {
         $newCollection = clone $collection;

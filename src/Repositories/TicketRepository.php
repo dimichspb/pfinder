@@ -3,6 +3,13 @@ namespace Pfinder\Repositories;
 
 use Pfinder\Exceptions\InvalidTicketNameException;
 
+/**
+ * Class TicketRepository
+ *
+ * Contains the mapping between ticket names and ticket classes
+ *
+ * @package Pfinder\Repositories
+ */
 class TicketRepository
 {
     const BUS_TICKET_NAME = 'Bus';
@@ -14,6 +21,11 @@ class TicketRepository
     const FLIGHT_TICKET_NAME = 'Flight';
     const FLIGHT_TICKET_CLASS = '\Pfinder\Tickets\FlightTicket';
 
+    /**
+     * Mapping ['name' => 'class'] array
+     *
+     * @return array
+     */
     public static function mapping()
     {
         return [
@@ -24,6 +36,12 @@ class TicketRepository
         ];
     }
 
+    /**
+     * Return the name of the class by the provided ticket's name
+     *
+     * @param string $name
+     * @return string
+     */
     public static function getClass(string $name): string
     {
         if (!isset(self::mapping()[$name])) {

@@ -5,8 +5,8 @@ use Pfinder\Base\BaseCollection;
 
 class TicketCollection extends BaseCollection
 {
-    public function __construct()
+    public function getClassName(): string
     {
-        parent::__construct('\PFinder\Base\BaseTicket');
+        return '\Pfinder\Base\BaseTicket';
     }
 }

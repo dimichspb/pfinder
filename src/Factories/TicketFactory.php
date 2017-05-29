@@ -26,7 +26,7 @@ class TicketFactory
             if (!is_array($ticketDetails)) {
                 throw new TicketDetailsParsingException('Ticket details must contain array of ticket details');
             }
-            $collection[] = self::createTicket($ticketDetails);
+            $collection = $collection->add(self::createTicket($ticketDetails));
         }
 
         return $collection;

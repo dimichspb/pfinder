@@ -9,16 +9,16 @@ use Pfinder\Interfaces\OutputInterface;
 abstract class BaseAPI implements APIInterface
 {
     protected $algorithm;
-    protected $result;
+    protected $output;
 
-    public function __construct(AlgorithmInterface $algorithm, OutputInterface $result)
+    public function __construct(AlgorithmInterface $algorithm, OutputInterface $output)
     {
         $this->algorithm = $algorithm;
-        $this->result = $result;
+        $this->output = $output;
     }
 
     public function sort(AdapterInterface $adapter)
     {
-        return $this->result->process($this->algorithm->process($adapter->getCollection()));
+        return $this->output->process($this->algorithm->run($adapter->getCollection()));
     }
 }

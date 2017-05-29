@@ -6,11 +6,11 @@ use Pfinder\Exceptions\InvalidTicketNameException;
 class TicketRepository
 {
     const BUS_TICKET_NAME = 'Bus';
-    const BUS_TICKET_CLASS = '\PFinder\Tickets\BusTicket';
+    const BUS_TICKET_CLASS = '\Pfinder\Tickets\BusTicket';
     const TRAIN_TICKET_NAME = 'Train';
-    const TRAIN_TICKET_CLASS = '\PFinder\Tickets\TrainTicket';
+    const TRAIN_TICKET_CLASS = '\Pfinder\Tickets\TrainTicket';
     const FLIGHT_TICKET_NAME = 'Flight';
-    const FLIGHT_TICKET_CLASS = '\PFinder\Tickets\FlightTicket';
+    const FLIGHT_TICKET_CLASS = '\Pfinder\Tickets\FlightTicket';
 
     public static function mapping()
     {

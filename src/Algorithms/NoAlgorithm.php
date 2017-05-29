@@ -7,7 +7,7 @@ use Pfinder\Interfaces\AlgorithmInterface;
 class NoAlgorithm implements AlgorithmInterface
 {
 
-    public function process(TicketCollection $collection): TicketCollection
+    public function run(TicketCollection $collection): TicketCollection
     {
         return $collection;
     }

@@ -8,7 +8,7 @@ class JsonOutput implements OutputInterface
 {
     public function process(TicketCollection $collection)
     {
-        return json_encode($collection);
+        return json_encode($collection->toArray());
     }
 
 }

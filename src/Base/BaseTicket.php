@@ -6,6 +6,8 @@ use Pfinder\Exceptions\TicketDetailsParsingException;
 abstract class BaseTicket
 {
     public $name;
+    public $origin;
+    public $destination;
 
     public function __construct(array $details)
     {

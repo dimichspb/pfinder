@@ -1,0 +1,13 @@
+{
+    "name": "dimichspb/pfinder",
+    "authors": [
+        {
+            "name": "Dmitry Tarantin",
+            "email": "dimichspb@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"Pfinder\\": "src/"}
+    },
+    "require": {}
+}

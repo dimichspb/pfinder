@@ -1,5 +1,4 @@
 <?php
-namespace Pfinder\Tests;
 
 use Pfinder\App;
 use PHPUnit\Framework\TestCase;

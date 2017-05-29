@@ -2,8 +2,9 @@
 namespace Pfinder\Base;
 
 use Pfinder\Exceptions\TicketDetailsParsingException;
+use Pfinder\Interfaces\TicketInterface;
 
-abstract class BaseTicket
+abstract class BaseTicket implements TicketInterface
 {
     public $name;
     public $origin;

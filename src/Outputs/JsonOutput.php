@@ -1,5 +1,5 @@
 <?php
-namespace Pfinder\Output;
+namespace Pfinder\Outputs;
 
 use Pfinder\Collections\TicketCollection;
 use Pfinder\Interfaces\OutputInterface;

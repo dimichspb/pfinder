@@ -11,7 +11,8 @@ class RecursiveAlgorithm implements AlgorithmInterface
     {
         $newCollection = clone $collection;
 
-        foreach ($collection as $index => $ticket) {
+        foreach ($collection as $ticket) {
+
             $newCollection = $newCollection->sort(function (BaseTicket $item1, BaseTicket $item2) {
                 if ($item1->origin === $item2->destination) {
                     return 1;

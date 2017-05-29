@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Train",
+    "origin": "Barcelona",
+    "destination": "Madrid"
+  },
+  {
+    "name": "Bus",
+    "origin": "Madrid",
+    "destination": "Madrid Airport"
+  },
+  {
+    "name": "Flight",
+    "origin": "Madrid Airport",
+    "destination": "Tenerife South Airport"
+  }
+]

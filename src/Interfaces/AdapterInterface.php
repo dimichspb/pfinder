@@ -1,9 +1,9 @@
 <?php
 namespace Pfinder\Interfaces;
 
-use Pfinder\Collection;
+use Pfinder\Collections\TicketCollection;
 
 interface AdapterInterface
 {
-    public function getCollection(): Collection;
+    public function getCollection(): TicketCollection;
 }

@@ -1,9 +1,9 @@
 <?php
 namespace Pfinder\Interfaces;
 
-use Pfinder\Collection;
+use Pfinder\Collections\TicketCollection;
 
 interface AlgorithmInterface
 {
-    public function process(Collection $collection): Collection;
+    public function process(TicketCollection $collection): TicketCollection;
 }

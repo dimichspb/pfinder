@@ -1,12 +1,12 @@
 <?php
 namespace Pfinder\Output;
 
-use Pfinder\Collection;
+use Pfinder\Collections\TicketCollection;
 use Pfinder\Interfaces\OutputInterface;
 
 class JsonOutput implements OutputInterface
 {
-    public function process(Collection $collection)
+    public function process(TicketCollection $collection)
     {
         return json_encode($collection);
     }

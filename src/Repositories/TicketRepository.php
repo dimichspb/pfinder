@@ -26,5 +26,6 @@ class TicketRepository
         if (!isset(self::mapping()[$name])) {
             throw new InvalidTicketNameException('Ticket with name ' . $name . ' could not be found in TicketsRepository.');
         }
+        return self::mapping()[$name];
     }
 }

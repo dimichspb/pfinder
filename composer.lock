@@ -1,0 +1,58 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "cea45f260ec737989dc73242f2510f5d",
+    "packages": [
+        {
+            "name": "danielgsims/php-collections",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/danielgsims/php-collections.git",
+                "reference": "06c7e3c28badb7c5533517bf7989b41cf2583e05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/danielgsims/php-collections/zipball/06c7e3c28badb7c5533517bf7989b41cf2583e05",
+                "reference": "06c7e3c28badb7c5533517bf7989b41cf2583e05",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.3",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Collections\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel G Sims",
+                    "email": "danielgarthsims@gmail.com"
+                }
+            ],
+            "description": "Collection classes for PHP",
+            "time": "2017-04-29T14:46:20+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

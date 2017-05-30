@@ -25,7 +25,7 @@ class App
      * @param string $algorithmClass
      * @param string $outputClass
      */
-    public function run($testCase, $algorithmClass = '\Pfinder\Algorithms\RecursiveAlgorithm', $outputClass = '\Pfinder\Outputs\JsonOutput')
+    public function run($testCase, $algorithmClass = '\Pfinder\Algorithms\UsortAlgorithm', $outputClass = '\Pfinder\Outputs\StringOutput')
     {
         $path = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'sources'; // path to all test cases
 

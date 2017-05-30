@@ -1,6 +1,7 @@
 <?php
 namespace Pfinder\Collections;
 
+use Collections\Collection;
 use Pfinder\Base\BaseCollection;
 use Pfinder\Interfaces\TicketInterface;
 
@@ -78,4 +79,29 @@ class TicketCollection extends BaseCollection
         return $this->insertBefore($index, $item);
     }
 
+    /**
+     * Recursive function to build a chain of tickets using self call with closure which determines next item condition as argument
+     *
+     * @param $ticket
+     * @param callable $condition
+     * @return TicketCollection
+     */
+    public function buildChain($ticket, callable $condition)
+    {
+        $newCollection = new TicketCollection();
+
+        foreach ($this as $item) {
+            if ($item === $ticket) {
+                continue;
+            }
+            if ($condition($item, $ticket)) {
+                /** @var TicketCollection $newCollection */
+                $newCollection = $newCollection->add($item);
+                $newCollection = $newCollection->merge($this->buildChain($item, $condition));
+                return $newCollection;
+            }
+        }
+
+        return $newCollection;
+    }
 }

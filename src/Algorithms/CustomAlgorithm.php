@@ -24,13 +24,12 @@ class CustomAlgorithm implements AlgorithmInterface
         $newCollection = new TicketCollection();
 
         foreach ($collection as $ticket) {
-
-            $newCollection = $newCollection->insertAfterBefore($ticket, function ($item) use ($ticket) {
-                return $item->destination === $ticket->origin;
+            $newCollection = $newCollection->insertAfterBefore($ticket,
+                function ($item) use ($ticket) {
+                    return $item->destination === $ticket->origin;
             }, function ($item) use ($ticket) {
-                return $item->origin === $ticket->destination;
+                    return $item->origin === $ticket->destination;
             });
-
         }
 
         return $newCollection;

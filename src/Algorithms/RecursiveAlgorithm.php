@@ -1,43 +1,39 @@
 <?php
 namespace Pfinder\Algorithms;
 
-use Pfinder\Base\BaseTicket;
 use Pfinder\Collections\TicketCollection;
 use Pfinder\Interfaces\AlgorithmInterface;
 
 /**
  * Class RecursiveAlgorithm
  *
- * Sorts tickets inside TicketCollection using usort function of PHP
+ * Sorts tickets inside TicketCollection using recursive function call
  *
  * @package Pfinder\Algorithms
  */
 class RecursiveAlgorithm implements AlgorithmInterface
 {
-    /**
-     * @inheritdoc
-     *
-     * @param TicketCollection $collection
-     * @return TicketCollection
-     */
     public function run(TicketCollection $collection): TicketCollection
     {
-        $newCollection = clone $collection;
+        $largestCollection = new TicketCollection();
 
         foreach ($collection as $ticket) {
+            $chainCollection = new TicketCollection();
+            $chainCollection = $chainCollection->add($ticket);
 
-            $newCollection = $newCollection->sort(function (BaseTicket $item1, BaseTicket $item2) {
-                if ($item1->origin === $item2->destination) {
-                    return 1;
-                }
-                if ($item1->destination === $item2->origin) {
-                    return -1;
-                }
+            /*
+             * TicketCollection::buildChain is recursive function which uses closure to find next item of a chain
+             */
+            $chainCollection = $chainCollection->merge($collection->buildChain($ticket, function ($item, $ticket) {
+                return $item->origin === $ticket->destination;
+            }));
 
-                return 1;
-            });
+            if (count($chainCollection) > count($largestCollection)) {
+                $largestCollection = $chainCollection;
+            }
         }
 
-        return $newCollection;
+        return $largestCollection;
     }
+
 }

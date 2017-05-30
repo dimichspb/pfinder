@@ -6,4 +6,4 @@ use Pfinder\App;
 
 $app = new App();
 
-$app->run('test1.json');
+$app->run('test8.json');

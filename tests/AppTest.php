@@ -70,6 +70,7 @@ class AppTest extends TestCase
     {
         return [
             //'\Pfinder\Algorithms\NoAlgorithm',
+            '\Pfinder\Algorithms\UsortAlgorithm',
             '\Pfinder\Algorithms\RecursiveAlgorithm',
             //'\Pfinder\Algorithms\CustomAlgorithm',
         ];

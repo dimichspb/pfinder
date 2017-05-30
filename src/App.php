@@ -4,7 +4,7 @@ namespace Pfinder;
 use Pfinder\Adapters\JsonAdapter;
 use Pfinder\Algorithms\CustomAlgorithm;
 use Pfinder\Algorithms\NoAlgorithm;
-use Pfinder\Algorithms\RecursiveAlgorithm;
+use Pfinder\Algorithms\UsortAlgorithm;
 use Pfinder\Outputs\JsonOutput;
 use Pfinder\Outputs\StringOutput;
 
@@ -25,7 +25,7 @@ class App
      * @param string $algorithmClass
      * @param string $outputClass
      */
-    public function run($testCase, $algorithmClass = '\Pfinder\Algorithms\RecursiveAlgorithm', $outputClass = '\Pfinder\Outputs\StringOutput')
+    public function run($testCase, $algorithmClass = '\Pfinder\Algorithms\RecursiveAlgorithm', $outputClass = '\Pfinder\Outputs\JsonOutput')
     {
         $path = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'sources'; // path to all test cases
 

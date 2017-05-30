@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Pfinder\Algorithms\RecursiveAlgorithm;
+use Pfinder\Algorithms\UsortAlgorithm;
 
 class RecursiveAlgorithmTest extends TestCase
 {

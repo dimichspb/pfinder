@@ -120,9 +120,10 @@ There are two default **outputs** provided with the package
 To implement your own sorting algorithm please implement `AlgorithmInterface` which has only one required method `run`.
 This method gets `TicketCollection` as argument and return sorted `TicketCollection` as result.
 
-There are three default **algorithms** provided with the package
+There are four default **algorithms** provided with the package
 * `NoAlgorithm` - gets `TicketCollection` and returns it without any changes and sorting
-* `RecursiveAlgorithm` - gets `TicketCollections`, sorts it using `usort` function of `PHP` and returns sorted `TicketCollection`
+* `UsortAlgorithm` - gets `TicketCollection`, sorts it using `usort` function of `PHP` and returns sorted `TicketCollection`
+* `RecursiveAlgorithm` - gets `TicketCollection`, sorts it using `recursive` function call and closure which determines next item condition
 * `CustomAlgorithm` - implements custom sorting algorithm. _Not finished yet_.
 
 ### Boarding ticket models configuration
